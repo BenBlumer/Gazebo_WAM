@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC    -shared -Wl,-soname,libmodel_push.so -o libmodel_push.so CMakeFiles/model_push.dir/plugins/model_push.cc.o -L/usr/lib/gazebo-1.8/plugins 
