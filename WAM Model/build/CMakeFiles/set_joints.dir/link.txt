@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC    -shared -Wl,-soname,libset_joints.so -o libset_joints.so CMakeFiles/set_joints.dir/plugins/set_joints.cc.o -L/usr/lib/gazebo-1.8/plugins 

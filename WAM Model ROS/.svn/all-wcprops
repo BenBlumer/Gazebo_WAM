@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Bablumer/!svn/ver/33/trunk/WAMDatabase/WAM%20Model%20ROS
+END
+model.config
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Bablumer/!svn/ver/21/trunk/WAMDatabase/WAM%20Model%20ROS/model.config
+END
+wam_world.sdf
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Bablumer/!svn/ver/21/trunk/WAMDatabase/WAM%20Model%20ROS/wam_world.sdf
+END
+doit.sh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Bablumer/!svn/ver/21/trunk/WAMDatabase/WAM%20Model%20ROS/doit.sh
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Bablumer/!svn/ver/21/trunk/WAMDatabase/WAM%20Model%20ROS/CMakeLists.txt
+END
+Readme
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Bablumer/!svn/ver/21/trunk/WAMDatabase/WAM%20Model%20ROS/Readme
+END
+wam.sdf
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Bablumer/!svn/ver/21/trunk/WAMDatabase/WAM%20Model%20ROS/wam.sdf
+END

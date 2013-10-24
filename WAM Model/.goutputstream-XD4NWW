@@ -1,0 +1,20 @@
+This package contains an SDF of IRI's WAM model. It should be used with Gazebo v. 1.5 or higher. The ROS version of Gazebo, as of this writing, is older. The model can be used by itself or with the joint controller plugin I've written for it. The plugin reads joint coordinates from the file "forGazebo" and commands the model to take these positions. 
+
+set_joints.cc -- This is the Gazebo plugin that controls the joints. There's an adjustable delay between moving to different sets of coordinates. By changing "100" in the line "if(iteration_number > 100)" one can adjust the delay.  Realtime control will be available in future versions. After modifying this file, you must rebuild plugin.
+
+wam.sdf -- This is an SDF version of IRI's WAM model. It relies on the files within "meshes" to give it the appropriate visual and collision properties.  To use the model without the joint controller, simply delete the line "<plugin name="set_joints" filename="build/libset_joints.so"/>"
+
+model.config tells Gazebo where everything is within this folder.
+
+wam_world.sdf is a demo of how to load the WAM arm using a "World file".  You can add things to the world file to add other objects, change orientations, and otherwise tailor a ready-to-go set up.
+
+CMakeList -- is used for compiling the plugin.
+
+forGazebo is a sample list of joint coordinates.  There are 7 values per line corresponding to the 7 joints 
+
+The script "doit.sh" compiles the plugin and runs Gazebo. You may need to delete the contents of the build folder before running the script. You may also need to make the script executable. To do this, type "chmod +x doit.sh" while in the directory of the script.
+
+To get Gazebo to recognize this model and its plugin, you have to set your Gazebo model path to the correct folder:
+On a linux shell: 
+  export GAZEBO_MODEL_PATH="location/to/wam/model/folder/":$GAZEBO_MODEL_PATH
+
