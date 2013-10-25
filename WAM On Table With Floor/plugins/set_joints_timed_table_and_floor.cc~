@@ -7,8 +7,8 @@
  */
 
 #include <boost/bind.hpp>
-#include <gazebo.hh>
-#include <physics/physics.hh>
+#include <gazebo/gazebo.hh>
+#include <gazebo/physics/physics.hh>
 #include <common/common.hh>
 #include <stdio.h>
 #include <unistd.h>
@@ -44,7 +44,7 @@ namespace gazebo
       //       // simulation iteration.
       this->updateConnection = event::Events::ConnectWorldUpdateBegin(boost::bind(&SetJointsTimedTableAndFloor::OnUpdate, this, _1));
       std::ifstream joint_coordinate_commands;
-      std::string path_to_joint_coord_file =  common::SystemPaths::Instance()->FindFileURI("model://WAM Model Timed With Camera/forGazebo");
+      std::string path_to_joint_coord_file =  common::SystemPaths::Instance()->FindFileURI("model://WAM On Table With Floor/forGazebo");
       
       joint_coordinate_commands.open(path_to_joint_coord_file.c_str());
       if (joint_coordinate_commands.good())
