@@ -33,7 +33,6 @@ namespace gazebo
       this->box_link_pt = this->model->GetLink("box_link");
       // Listen to the update event. This event is broadcast every
       // simulation iteration.
-      iteration_number = 1;
       this->updateConnection = event::Events::ConnectWorldUpdateBegin(boost::bind(&ModelPush::OnUpdate, this));
      
 
@@ -90,7 +89,6 @@ namespace gazebo
       if(all_pose_commands_it == all_pose_commands.end())
       {
 	all_pose_commands_it = all_pose_commands.begin();
-	iteration_number++; 
 	       this->gazebo_time_at_init = this->model->GetWorld()->GetSimTime();
 
       }
@@ -118,7 +116,7 @@ namespace gazebo
     private: std::vector< std::vector<double> > all_pose_commands;
     private: std::vector< std::vector<double> >::iterator all_pose_commands_it;  
     private: gazebo::physics::LinkPtr box_link_pt;
-    private: int iteration_number;
+
     
   };
   

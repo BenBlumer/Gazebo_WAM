@@ -88,7 +88,7 @@ namespace gazebo
       //Have we gone through another iteration of the full motion?
       if(all_pose_commands_it == all_pose_commands.end())
       {
-	all_pose_commands_it = all_pose_commands.begin();
+	all_pose_commands_it = all_pose_commands.begin(); // Then we'll start from the beginning.
 	       this->gazebo_time_at_init = this->model->GetWorld()->GetSimTime();
 
       }
