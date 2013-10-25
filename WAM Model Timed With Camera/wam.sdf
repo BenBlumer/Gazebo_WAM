@@ -1,8 +1,7 @@
 <?xml version="1.0" ?>
 <sdf version="1.4">
   <model name="iri_wam_with_camera">
-    
-    <link name="wam_link0">
+ <link name="wam_link0">
       <pose>0.220000 0.140000 0.346000 0.000000 0.000000 0.000000</pose>
       <inertial>
 	<pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
@@ -21,7 +20,7 @@
 	<geometry>
 	  <mesh>
 	    <scale>1.000000 1.000000 1.000000</scale>
-	    <uri>model://WAM Model Timed With Camera/meshes/wambase.stl</uri>
+	    <uri>model://WAM On Table With Floor/meshes/wambase.stl</uri>
 	  </mesh>
 	</geometry>
 	<surface>
@@ -38,7 +37,7 @@
 	<geometry>
 	  <mesh>
 	    <scale>1.000000 1.000000 1.000000</scale>
-	    <uri>model://WAM Model Timed With Camera/meshes/wambase.stl</uri>
+	    <uri>model://WAM On Table With Floor/meshes/wambase.stl</uri>
 	  </mesh>
 	</geometry>
 	<material />
@@ -83,7 +82,7 @@
 	<geometry>
 	  <mesh>
 	    <scale>1.000000 1.000000 1.000000</scale>
-	    <uri>model://WAM Model Timed With Camera/meshes/wam1.stl</uri>
+	    <uri>model://WAM On Table With Floor/meshes/wam1.stl</uri>
 	  </mesh>
 	</geometry>
 	<surface>
@@ -100,7 +99,7 @@
 	<geometry>
 	  <mesh>
 	    <scale>1.000000 1.000000 1.000000</scale>
-	    <uri>model://WAM Model Timed With Camera/meshes/wam1.stl</uri>
+	    <uri>model://WAM On Table With Floor/meshes/wam1.stl</uri>
 	  </mesh>
 	</geometry>
 	<material />
@@ -148,7 +147,7 @@
 	  <geometry>
 	    <mesh>
 	      <scale>1.000000 1.000000 1.000000</scale>
-	      <uri>model://WAM Model Timed With Camera/meshes/wam2.stl</uri>
+	      <uri>model://WAM On Table With Floor/meshes/wam2.stl</uri>
 	    </mesh>
 	  </geometry>
 	  <surface>
@@ -165,7 +164,7 @@
 	  <geometry>
 	    <mesh>
 	      <scale>1.000000 1.000000 1.000000</scale>
-	      <uri>model://WAM Model Timed With Camera/meshes/wam2.stl</uri>
+	      <uri>model://WAM On Table With Floor/meshes/wam2.stl</uri>
 	    </mesh>
 	  </geometry>
 	  <material />
@@ -183,8 +182,8 @@
 	<axis>
 	  <xyz>0.000000 1.000000 0.000000</xyz>
 	  <limit>
-	    <lower>-2.000000</lower>
-	    <upper>2.000000</upper>
+	    <lower>-1.97</lower>
+	    <upper>1.970000</upper>
 	    <effort>30.000000</effort>
 	    <velocity>2.000000</velocity>
 	  </limit>
@@ -212,7 +211,7 @@
 	  <geometry>
 	    <mesh>
 	      <scale>1.000000 1.000000 1.000000</scale>
-	      <uri>model://WAM Model Timed With Camera/meshes/wam3.stl</uri>
+	      <uri>model://WAM On Table With Floor/meshes/wam3.stl</uri>
 	    </mesh>
 	  </geometry>
 	  <surface>
@@ -229,7 +228,7 @@
 	  <geometry>
 	    <mesh>
 	      <scale>1.000000 1.000000 1.000000</scale>
-	      <uri>model://WAM Model Timed With Camera/meshes/wam3.stl</uri>
+	      <uri>model://WAM On Table With Floor/meshes/wam3.stl</uri>
 	    </mesh>
 	  </geometry>
 	  <material />
@@ -276,7 +275,7 @@
 	  <geometry>
 	    <mesh>
 	      <scale>1.000000 1.000000 1.000000</scale>
-	      <uri>model://WAM Model Timed With Camera/meshes/wam4.stl</uri>
+	      <uri>model://WAM On Table With Floor/meshes/wam4.stl</uri>
 	    </mesh>
 	  </geometry>
 	  <surface>
@@ -293,7 +292,7 @@
 	  <geometry>
 	    <mesh>
 	      <scale>1.000000 1.000000 1.000000</scale>
-	      <uri>model://WAM Model Timed With Camera/meshes/wam4.stl</uri>
+	      <uri>model://WAM On Table With Floor/meshes/wam4.stl</uri>
 	    </mesh>
 	  </geometry>
 	  <material />
@@ -312,7 +311,7 @@
 	  <xyz>0.000000 1.000000 0.000000</xyz>
 	  <limit>
 	    <lower>-0.900000</lower>
-	    <upper>2.800000</upper>
+	    <upper>3.10000</upper>
 	    <effort>35.000000</effort>
 	    <velocity>2.000000</velocity>
 	  </limit>
@@ -340,7 +339,7 @@
 	  <geometry>
 	    <mesh>
 	      <scale>1.000000 1.000000 1.000000</scale>
-	      <uri>model://WAM Model Timed With Camera/meshes/wam5.stl</uri>
+	      <uri>model://WAM On Table With Floor/meshes/wam5.stl</uri>
 	    </mesh>
 	  </geometry>
 	  <surface>
@@ -357,7 +356,7 @@
 	  <geometry>
 	    <mesh>
 	      <scale>1.000000 1.000000 1.000000</scale>
-	      <uri>model://WAM Model Timed With Camera/meshes/wam5.stl</uri>
+	      <uri>model://WAM On Table With Floor/meshes/wam5.stl</uri>
 	    </mesh>
 	  </geometry>
 	  <material />
@@ -375,8 +374,8 @@
 	<axis>
 	  <xyz>0.000000 0.000000 1.000000</xyz>
 	  <limit>
-	    <lower>-4.800000</lower>
-	    <upper>1.300000</upper>
+	    <lower>-4.760000</lower>
+	    <upper>1.240000</upper>
 	    <effort>30.000000</effort>
 	    <velocity>2.000000</velocity>
 	  </limit>
@@ -404,7 +403,7 @@
 	  <geometry>
 	    <mesh>
 	      <scale>1.000000 1.000000 1.000000</scale>
-	      <uri>model://WAM Model Timed With Camera/meshes/wam6.stl</uri>
+	      <uri>model://WAM On Table With Floor/meshes/wam6.stl</uri>
 	    </mesh>
 	  </geometry>
 	  <surface>
@@ -421,7 +420,7 @@
 	  <geometry>
 	    <mesh>
 	      <scale>1.000000 1.000000 1.000000</scale>
-	      <uri>model://WAM Model Timed With Camera/meshes/wam6.stl</uri>
+	      <uri>model://WAM On Table With Floor/meshes/wam6.stl</uri>
 	    </mesh>
 	  </geometry>
 	  <material />
@@ -439,8 +438,8 @@
 	<axis>
 	  <xyz>0.000000 1.000000 0.000000</xyz>
 	  <limit>
-	    <lower>-1.600000</lower>
-	    <upper>1.600000</upper>
+	    <lower>-1.500000</lower>
+	    <upper>1.500000</upper>
 	    <effort>30.000000</effort>
 	    <velocity>2.000000</velocity>
 	  </limit>
@@ -468,7 +467,7 @@
 	  <geometry>
 	    <mesh>
 	      <scale>1.000000 1.000000 1.000000</scale>
-	      <uri>model://WAM Model Timed With Camera/meshes/wam7.stl</uri>
+	      <uri>model://WAM On Table With Floor/meshes/wam7.stl</uri>
 	    </mesh>
 	  </geometry>
 	  <surface>
@@ -485,7 +484,7 @@
 	  <geometry>
 	    <mesh>
 	      <scale>1.000000 1.000000 1.000000</scale>
-	      <uri>model://WAM Model Timed With Camera/meshes/wam7.stl</uri>
+	      <uri>model://WAM On Table With Floor/meshes/wam7.stl</uri>
 	    </mesh>
 	  </geometry>
 	  <material />
@@ -514,8 +513,8 @@
 	<axis>
 	  <xyz>0.000000 0.000000 1.000000</xyz>
 	  <limit>
-	    <lower>-2.200000</lower>
-	    <upper>2.200000</upper>
+	    <lower>-3.000000</lower>
+	    <upper>3.000000</upper>
 	    <effort>30.000000</effort>
 	    <velocity>2.000000</velocity>
 	  </limit>
