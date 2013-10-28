@@ -1,7 +1,8 @@
 <?xml version="1.0" ?>
 <sdf version="1.4">
   <model name="iri_wam">
-  <link name="wam_link0">
+   <link name="wam_link0">
+
       <pose>0.220000 0.140000 0.346000 0.000000 0.000000 0.000000</pose>
       <inertial>
 	<pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>

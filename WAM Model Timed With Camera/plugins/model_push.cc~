@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Modified by Benjamin Blumer to parse coordinate trajectory files. 2013.
+ * Modified by Benjamin Bluemr 2013.
  */
 #include <boost/bind.hpp>
 #include "gazebo/physics/physics.hh"

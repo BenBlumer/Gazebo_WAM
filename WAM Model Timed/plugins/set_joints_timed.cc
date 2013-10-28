@@ -1,5 +1,5 @@
 /* 
- *  		 Written by Benjamin Blumer for controlling a Gazebo (gazebosim.org) model of the Barrett WAM Arm by IRI.
+ *  		 Written by Benjamin Blumer for controlling a Gazebo (gazebosim.org) model of the Barrett WAM Arm.
  * 		 No guarantees on functionality or performance. 
  * 		 Feel free to distribute the code, but leave the credits intact.
  * 		 BenjaminAaronBlumer@gmail.com

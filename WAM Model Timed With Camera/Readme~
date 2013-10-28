@@ -1,8 +1,6 @@
 **************************************************************************
-*** Model based on IRI's URDF WAM Models.
-*** They were converted to SDF and tweaked by Benjamin Blumer.
-*** Plugins written by Benjamin Blumer.
-*** BenjaminAaronBlumer@gmail.com
+*** Model based on IRI's URDF WAM Models. 
+*** Plugins written by Benjamin Blumer:  BenjaminAaronBlumer@gmail.com
 ********************************************************************************
 
 This package contains an SDF of IRI's WAM model with a camera attached. It should be used with Gazebo v. 1.5 or higher. The ROS version of Gazebo, as of this writing, is older. The model can be used by itself or with the joint controller plugin I've written for it. The plugin reads joint coordinates (with timestamps) from the file "forGazebo". The model is commanded to a set of joint positions Gazebo's clock ("Sim Time") reaches the set's timestamp. The motion will loop. If you launch the wam_world file, it will also launch a block. The block is controlled by the coordinates in "blockPose".  The WAM is launched on top of a table -- the "TableMod" folder in WAMDatabase is a requirement for this to work.  Additionally, everything is on a hardwood floor for which "floor" within WAMDatabase is a requirement.
