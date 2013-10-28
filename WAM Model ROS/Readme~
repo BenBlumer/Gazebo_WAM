@@ -1,4 +1,13 @@
-This package contains an SDF of IRI's WAM model. It should be used with Gazebo v. 1.5 or higher. The ROS version of Gazebo, as of this writing, is older. The model can be used by itself or with the joint controller plugin I've written for it. The plugin subscribes to the "joint_traj" rostopic (with timestamps).  The ros_topic should be publishing a JointTrajectory type message. An example ROS node that published what this plugin is looking for is in "/home/benjaminblumer/Dropbox/RoboticsResearch/Bablumer/trunk/catkin_ws/src". The model is commanded to a set of joint positions Gazebo's clock ("Sim Time") reaches the set's timestamp. 
+**************************************************************************
+*** Model based on IRI's URDF WAM Models.
+*** They were converted to SDF and tweaked by Benjamin Blumer.
+*** Plugins written by Benjamin Blumer.
+*** BenjaminAaronBlumer@gmail.com
+********************************************************************************
+
+
+
+This package contains an SDF of IRI's WAM model. It should be used with Gazebo v. 1.5 or higher. The ROS version of Gazebo, as of this writing, is older. The model can be used by itself or with the joint controller plugin I've written for it. The plugin subscribes to the "joint_traj" rostopic (with timestamps).  The ros_topic should be publishing a JointTrajectory type message. An example ROS node that published what this plugin is looking for is in this folder as "exampleROSNode.py". The model is commanded to a set of joint positions when Gazebo's clock ("Sim Time") reaches the set's timestamp. 
 
 ros_wam_plugin.cc -- This is the Gazebo plugin that controls the joints. After modifying this file, you must rebuild plugin.
 
