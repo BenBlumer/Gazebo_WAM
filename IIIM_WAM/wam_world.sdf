@@ -9,7 +9,7 @@
       <uri>model://sun</uri>
     </include>
     <include>
-      <uri>model://WAM Model Timed</uri>
+      <uri>model://IIIM_WAM</uri>
     </include>
   </world>
 </sdf>

@@ -1,11 +1,8 @@
 <?xml version="1.0" ?>
 <sdf version="1.4">
   <model name="iri_wam">
-<<<<<<< HEAD
-  <link name="wam_link0">
-=======
    <link name="wam_link0">
->>>>>>> merge_ROS_with_Timed
+
       <pose>0.220000 0.140000 0.346000 0.000000 0.000000 0.000000</pose>
       <inertial>
 	<pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
@@ -52,6 +49,8 @@
 	<angular>0.000000</angular>
       </velocity_decay>
       <self_collide>1</self_collide>
+
+
     </link>
     <joint name="wam0_fix" type="revolute">
       <child>wam_link0</child>
@@ -499,7 +498,7 @@
 	  <angular>0.000000</angular>
 	</velocity_decay>
 	<self_collide>1</self_collide>
-	<sensor name='my_camera' type='camera'>
+	<!--<sensor name='my_camera' type='camera'>
 	  
 	  <pose>-0.095 0 0.065 0 -1.57 0 </pose>
 	  <camera>
@@ -509,7 +508,15 @@
 	      <height>384</height>
 	    </image>
 	  </camera>
-	</sensor>
+	</sensor>-->
+ <sensor name='base_contact' type='contact'>
+          <contact>
+            <collision>wam_link0_collision</collision>
+          </contact>
+<update_rate> 1 </update_rate>
+</sensor>
+
+
       </link>
       <joint name="j7_joint" type="revolute">
 	<child>wam_link7</child>
