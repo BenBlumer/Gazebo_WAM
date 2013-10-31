@@ -1,12 +1,31 @@
+
 **************************************************************************
-*** Model based on IRI's URDF WAM Models.
-*** They were converted to SDF and tweaked by Benjamin Blumer.
+*** Model based on Institut de Robòtica's URDF WAM Models and STL files. Find them and many more great tools here: http://wiki.iri.upc.edu/index.php/IRI_ROS
+*** They were converted to SDF (using Gazebosim) and tweaked by Benjamin Blumer.
 *** Plugins written by Benjamin Blumer.
 *** BenjaminAaronBlumer@gmail.com
-********************************************************************************
+*** The files are licensed under the GPL as specified in each file. This Readme is also licensed under the GPL.
+**************************************************************************************
+    Readme file for an SDF WAM Model and Plugins
+    Copyright (C) 2013 Benjamin Aaron Blumer
 
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-This package contains an SDF of IRI's WAM model. It should be used with Gazebo v. 1.5 or higher. The ROS version of Gazebo, as of this writing, is older. The model can be used by itself or with the joint controller plugin I've written for it. The plugin subscribes to the "joint_traj" rostopic (with timestamps).  The ros_topic should be publishing a JointTrajectory type message. An example ROS node that published what this plugin is looking for is in this folder as "exampleROSNode.py". The model is commanded to a set of joint positions when Gazebo's clock ("Sim Time") reaches the set's timestamp. 
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+What this package will do for you:
+It will let you load a model of Barrett's WAM Arm (http://www.barrett.com/) in to Gazebo simulator (gazebosim.org). You can then set the joint angles using a ROS (ros.org) node publishing a JointTrajectory or using a time-stamped joint-coordinate list. Examples of both are included.
+
+This package contains an SDF of IRI's WAM model. It should be used with Gazebo v. 1.5 or higher. The version of Gazebo bundled with pre-Hydra ROS are outdated and should not be used. The model can be used by itself or with the joint controller plugin I've written for it. The plugin subscribes to the "joint_traj" rostopic (with timestamps).  The ros_topic should be publishing a JointTrajectory type message. An example ROS node that published what this plugin is looking for is in this folder as "exampleROSNode.py". The model is commanded to a set of joint positions when Gazebo's clock ("Sim Time") reaches the set's timestamp. 
 
 ros_wam_plugin.cc -- This is the Gazebo plugin that controls the joints. After modifying this file, you must rebuild plugin.
 
