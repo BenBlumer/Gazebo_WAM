@@ -66,11 +66,9 @@ script.
 To get Gazebo to recognize this model and its plugin, you have to set your
 Gazebo model path to the correct folder:
 On a linux shell: 
-  export GAZEBO_MODEL_PATH=location/to/wam/model/folder/WAM\ Model\
-Timed:$GAZEBO_MODEL_PATH
+  export GAZEBO_MODEL_PATH=location/to/wam/model/folder:$GAZEBO_MODEL_PATH
 also set the plugin path:
-export GAZEBO_PLUGIN_PATH=location/to/wam/model/folder/WAM\ Model\
-Timed:${GAZEBO_PLUGIN_PATH}
+export GAZEBO_PLUGIN_PATH=location/to/wam/model/folder/WAM\ Model\ Timed:${GAZEBO_PLUGIN_PATH}
 
 
 QUICK START:
@@ -79,9 +77,10 @@ I'm assuming you have Gazebo installed.
 
 1. Add the folders to the environment variables, so that Gazebo knows where to look.
 On a linux shell: 
-  "export GAZEBO_MODEL_PATH=location/to/wam/model/folder/WAM\ Model\
-Timed:$GAZEBO_MODEL_PATH"
+  "export GAZEBO_MODEL_PATH=location/to/wam/model/folder/:$GAZEBO_MODEL_PATH"
   "export GAZEBO_PLUGIN_PATH=location/to/wam/model/folder/WAM\ Model\ Timed:${GAZEBO_PLUGIN_PATH}"
+Notice: The model path should point to the folder that contains "WAM Model Timed", 
+where as the plugin path should point to the folder itself.
 
 2. Compile the plugins. 
  In a terminal:

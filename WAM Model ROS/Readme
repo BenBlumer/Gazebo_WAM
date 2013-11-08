@@ -45,8 +45,10 @@ I'm assuming you have ROS, Python, and Gazebo installed.
 
 1. Add the folders to the environment variables, so that Gazebo knows where to look.
 On a linux shell: 
-  "export GAZEBO_MODEL_PATH=location/to/wam/model/folder/WAM\ Model\ ROS:$GAZEBO_MODEL_PATH"
+  "export GAZEBO_MODEL_PATH=location/to/wam/model/folder/:$GAZEBO_MODEL_PATH"
   "export GAZEBO_PLUGIN_PATH=location/to/wam/model/folder/WAM\ Model\ ROS:${GAZEBO_PLUGIN_PATH}"
+Notice: The model path should point to the folder that contains "WAM Model ROS", 
+where as the plugin path should point to the folder itself.
 
 2. Compile the plugins. 
  In a terminal:
