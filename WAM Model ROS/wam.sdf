@@ -1,3 +1,67 @@
+<!--
+    WAM SDF model.
+    Copyright (C) 2013 Benjamin Aaron Blumer
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  
+**************************************************************************
+ Model based on Institut de Robòtica's (IRI) URDF WAM Models and STL files. Find them and many more great tools here: http://wiki.iri.upc.edu/index.php/IRI_ROS
+ They were converted to SDF (using Gazebosim) and tweaked by Benjamin Blumer. 
+ IRI owns the original URDF code and the associated STL files (their licensed under LGPL). They did the bulk of the work in bringing this SDF to you.
+ I ran it through the Gazebo converter, changed some tags to get it to load, and studied and modified the joint limits.
+
+Barrett gives the joint limits of the WAM as:
+- 2.600000 < J1 < 2.60000
+- 2.000000 < J2 < 2.00000
+- 2.800000 < J3 < 2.80000
+- 0.900000 < J4 < 3.10000 
+- 4.760000 < J5 < 1.24000
+- 1.600000 < J6 < 1.60000
+- 3.000000 < J7 < 3.00000 
+
+The raw Gazebo-converted SDF file gave the joint limits as:
+- 2.600000 < J1 < 2.60000
+- 2.000000 < J2 < 2.00000
+- 2.800000 < J3 < 2.80000
+- 0.900000 < J4 < 2.80000
+- 4.800000 < J5 < 1.300000
+- 1.600000 < J6 < 1.60000
+- 2.200000 < J7 < 2.20000
+
+However it created some problems. The model would become shaky and occasionally the components would separate at the extremes. 
+I did some tweaking and realized that the model failed when pushed past these limits:
+- inf < J1 < inf
+- 1.97 < J2 < 1.97
+- inf < J3 < inf
+- inf < J4 < inf
+- inf < J5 < inf
+-(Pi/2 -.1) < J6 < (Pi/2 -.1)
+- inf < J7 < inf
+
+In trying to be as faithful to the original Barrett specs, while not allowing the model not fail, I've come to these limits:
+- 2.6 < J1 < 2.6
+- 1.97 < J2 < 1.97
+- 2.8 < J3 < 2.8
+- 0.9 < J4 < 3.1
+- 4.76 < J5 < 1.24
+- 1.5 < J6 < 1.5
+- 3.0 < J7 < 3.0
+            
+Benjamin Aaron Blumer (at) gmail 
+**************************************************************************************
+    
+    -->
 <?xml version="1.0" ?>
 <sdf version="1.4">
   <model name="iri_wam">
@@ -496,17 +560,6 @@
 	  <angular>0.000000</angular>
 	</velocity_decay>
 	<self_collide>1</self_collide>
-	<sensor name='my_camera' type='camera'>
-	  
-	  <pose>-0.095 0 0.065 0 -1.57 0 </pose>
-	  <camera>
-	    <horizontal_fov>.785</horizontal_fov>
-	    <image>
-	      <width>512</width>
-	      <height>384</height>
-	    </image>
-	  </camera>
-	</sensor>
       </link>
       <joint name="j7_joint" type="revolute">
 	<child>wam_link7</child>
