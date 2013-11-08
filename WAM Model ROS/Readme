@@ -23,7 +23,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 What this package will do for you:
-It will let you load a model of Barrett's WAM Arm (http://www.barrett.com/) in to Gazebo simulator (gazebosim.org). You can then set the joint angles using a ROS (ros.org) node publishing a JointTrajectory.
+It will let you load a model of Barrett's WAM Arm (http://www.barrett.com/) in to Gazebo simulator (gazebosim.org). You can then set the joint angles using a ROS (ros.org) node publishing a JointTrajectory. An example ROS node is included.
 
 This package contains an SDF of IRI's WAM model. It should be used with Gazebo v. 1.5 or higher. The versions of Gazebo bundled with pre-Hydra ROS are outdated and should not be used. The model can be used by itself or with the joint controller plugin I've written for it. The plugin subscribes to the "joint_traj" rostopic (with timestamps).  The ros_topic should be publishing a JointTrajectory type message. An example ROS node that publishes what this plugin is looking for is in this folder as "exampleROSNode.py". The model is commanded to a set of joint positions when Gazebo's clock ("Sim Time") reaches the set's timestamp. 
 
